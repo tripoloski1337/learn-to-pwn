@@ -18,5 +18,5 @@ void kan()
 
 void bin()
 {
-  a = "/bin/sh";
+  char a = "/bin/sh";
 }

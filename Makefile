@@ -9,7 +9,7 @@ main:
 	gcc jmp/jmp.c -o jmp/jmp -m32 -mpreferred-stack-boundary=2 -no-pie -fno-stack-protector
 	gcc overwrite_instruction_pointer/ip.c -o overwrite_instruction_pointer/ip -m32 -mpreferred-stack-boundary=2 -no-pie -fno-stack-protector
 	gcc procedure_linkage_table/plt.c -o procedure_linkage_table/plt -m32 -mpreferred-stack-boundary=2 -no-pie -fno-stack-protector
-
+	gcc syscall/syscall.c -o syscall/syscall -m32 -mpreferred-stack-boundary=2 -no-pie -fno-stack-protector -fno-builtin -static
 clean:
 	rm -rfv arbitrary_write/arbitrary_write
 	rm -rfv arbitrary_write_bss/bss
@@ -18,3 +18,4 @@ clean:
 	rm -rfv jmp/jmp
 	rm -rfv overwrite_instruction_pointer/ip
 	rm -rfv procedure_linkage_table/plt
+	rm -rfv syscall/syscall
