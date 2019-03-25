@@ -2,8 +2,8 @@
 #CFLAGS = -Wall -mpreferred-stack-boundary=2 -m32 -fno-stack-protector
 #folder = array('arbitrary_write',arbitrary_write)
 main:
-	gcc arbitrary_write/arbitrary_rwx.c -o arbitrary_write/arbitrary_write -m32 -mpreferred-stack-boundary=2 -z -execstack -no-pie -fno-stack-protector -no-pie -fno-stack-protector
-	gcc arbitrary_write_bss/arbitrary_rwx_bss.c -o arbitrary_write_bss/bss -m32 -mpreferred-stack-boundary=2 -z -execstack -no-pie -fno-stack-protector -no-pie -fno-stack-protector
+	gcc -fno-stack-protector -z execstack -o arbitrary_write/arbitrary_write arbitrary_write/arbitrary_wx.c -m32 -mpreferred-stack-boundary=2 -no-pie
+	gcc -fno-stack-protector -z execstack -o arbitrary_write_bss/bss arbitrary_write_bss/arbitrary_rwx_bss.c -m32 -mpreferred-stack-boundary=2 -no-pie
 	gcc defeat_aslr/lib.c -o defeat_aslr/lib -m32 -mpreferred-stack-boundary=2 -no-pie -fno-stack-protector
 	gcc defeat_canary/canary.c -o defeat_canary/canary -m32 -mpreferred-stack-boundary=2 -no-pie -fno-stack-protector
 	gcc jmp/jmp.c -o jmp/jmp -m32 -mpreferred-stack-boundary=2 -no-pie -fno-stack-protector
