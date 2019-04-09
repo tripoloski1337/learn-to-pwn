@@ -11,3 +11,4 @@ learn to do pwn
 6 | jmp | easy | ROP
 7 | procedure linkage table | easy | ret2plt
 8 | syscall | easy | ROP
+9 | _dl_runtime_resolve | easy | ret2dl-resolve
