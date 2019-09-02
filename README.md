@@ -9,6 +9,7 @@ learn to do pwn
 4 | defeat aslr | medium | ret2libc attack
 5 | defeat canary | medium | ret2libc attack
 6 | jmp | easy | ROP
-7 | procedure linkage table | easy | ret2plt
+7 | procedure linkage table | easy | raet2plt
 8 | syscall | easy | ROP
 9 | _dl_runtime_resolve | easy | ret2dl-resolve
+10| tcache_poisoning | medium | tcache poisoning (heap exploitation) @libc2.27
