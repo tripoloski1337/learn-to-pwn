@@ -1,5 +1,5 @@
 # pwning
-learn to do pwn
+learn to do pwn , in this repository i will make some vulnerable binary so you can attack the binary by various technique
 
 0x0 | Name | Level |  technique
 --- | --- | --- | ---
